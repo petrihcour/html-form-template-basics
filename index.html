@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>HTML Form Basics</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <main>
+
+        <h1>HTML Form Basics</h1>
+
+        <!-- TEXT FIELD -->
+        <section>
+            <h2> Text field</h2>
+            <h3>Text field syntax example:</h3>
+            <xmp>
+                <form>
+                    <label for="name">First name:</label>
+                    <input id="name" type="text" name="name" />
+                </form>
+            </xmp>
+            <!-- Create a text field -->
+            <form>
+                <label for="name">First Name:</label>
+                <input id="name" type="text" name="name" />
+            </form>
+
+            <p> The example above has two HTML elements: a <strong>label</strong> and an <strong>input</strong>.</p>
+            <p><strong>label</strong>: guides users on what to enter and helps with accessibility for people who use
+                screen readers. To connect the label with the <strong>input</strong>, we use the <strong>for</strong>
+                attribute in the label, which links to the <strong>id</strong> attribute in the text field.</id>
+            </p>
+
+            <p><strong>input</strong>: text fields have special attributes that make them work correctly.
+            <ul>
+                <li>
+                    <strong> id</strong>: gives each text field a unique name so the <strong>label</strong> knows which
+                    text field it's associated with.
+                </li>
+                <li>
+                    <strong>type</strong>: defines the kind of input it is. For text fields, the <strong>type</strong>
+                    is set to "text," which means users can enter plain text.
+                </li>
+                <li>
+                    <strong>name</strong>: helps identify the <strong>input </strong>field when the entire form is sent
+                    to a server.
+                </li>
+            </ul>
+            </p>
+
+            <h3>Example of the three additional <em>text field</em></strong> attributes:</h3>
+
+
+            <xmp>
+                <form>
+                    <label for="location">Zipcode:</label>
+                    <input id="location" type="text" name="zipcode" autofocus="on" maxlength="5" required />
+                </form>
+            </xmp>
+            <form>
+                <label for="location">Zipcode:</label>
+                <input id="location" type="text" name="zipcode" autofocus="on" maxlength="5" required />
+            </form>
+            <p>
+            <ol>
+                <li>
+                    <strong>autofocus: on</strong>: sets the first input to autofocus to help draw the user's attention
+                    to it. It's best to use this only once on a page.
+                </li>
+                <li>
+                    <strong>required</strong>: tells the user that this field must be filled in before the form is
+                    submitted.
+                </li>
+                <li> <strong>maxlength: number</strong>: limits the number of characters added to the text field.</li>
+            </ol>
+            </p>
+
+        </section>
+
+        <!-- TEXT AREA FIELD -->
+        <section>
+            <h2> Text area fields</h2>
+            <p><strong>Text area fields</strong> allow the user with a multi-line input field so they can enter an
+                unlimited (or limited) amount of characters. These are best used for collecting a longer message.</p>
+            <h3>Text area field syntax example: </h3>
+            <xmp>
+                <form>
+                    <label for="form-message">Your message:</label>
+                    <textarea id="form-message" name="message"></textarea>
+                </form>
+            </xmp>
+            <form>
+                <label for="form-message">Your message:</label>
+                <textarea id="form-message" name="message"></textarea>
+            </form>
+            <h3>Attributes to alter the <em>text area</em> appearance and functionality:</h3>
+            <xmp>
+                <form>
+                    <div>
+                        <label for="form-message">Your message:</label>
+                        <textarea id="form-message" name="message" autofocus="on" required maxlength="200"></textarea>
+                    </div>
+                </form>
+            </xmp>
+            <form>
+                <div>
+                    <label for="form-message">Your message:</label>
+                    <textarea id="form-message" name="message" autofocus="on" required maxlength="200"></textarea>
+                </div>
+            </form>
+            <p>The example above states that it's a multi-line text field that will store the data within the same
+                <strong>message</strong>. The autofocus is set to <strong>on</strong>, the field is required, and only
+                200 characters can be entered.
+            </p>
+            <p>
+            <ul>
+                <li><strong>cols</strong>: sets the visible width of a text area in character spaces. Can also use the
+                    <strong>width</strong> attribute in CSS.
+                </li>
+                <li><strong>rows</strong>: sets the visible number of lines in a text area in character spaces. Can also
+                    use the <strong>height</strong> attribute in CSS.</li>
+                <li><strong>autofocus: on</strong>: sets the first input to autofocus to help draw the user's attention
+                    to it. It's best to use this only once on a page.</li>
+                <li><strong>required</strong>: tells the user that this field must be filled in before the form is
+                    submitted.</li>
+                <li> <strong>maxlength: number</strong>: limits the number of characters added to the text field.</li>
+            </ul>
+            </p>
+        </section>
+
+        <!-- FIELDSET AND LEGEND -->
+        <section>
+            <h2>Fieldset and legend</h2>
+            <p>The <strong>fieldset</strong> element is used to group together related inputs and labels. It helps with
+                web crawlers and screen readers without visual representation. The <strong>legend</strong> element is
+                like a title for the <strong>fieldset</strong>.</p>
+
+            <h3>Fieldset and legend syntax example:</h3>
+            <xmp>
+                <form>
+                    <fieldset>
+                        <legend>Shipping Information</legend>
+                        <div>
+                            <label for="name">Full Name:</label>
+                            <input id="name" type="text" name="name" />
+                        </div>
+                        <div>
+                            <label for="location">Zipcode:</label>
+                            <input id="location" type="text" name="zipcode" autofocus="on" maxlength="5" required />
+                        </div>
+                    </fieldset>
+                </form>
+            </xmp>
+            <form>
+                <fieldset>
+                    <legend>Shipping Information</legend>
+                    <div>
+                        <label for="name">Full Name:</label>
+                        <input id="name" type="text" name="name" />
+                    </div>
+                    <div>
+                        <label for="location">Zipcode:</label>
+                        <input id="location" type="text" name="zipcode" autofocus="on" maxlength="5" required />
+                    </div>
+                </fieldset>
+            </form>
+            <p>The <strong>fieldset</strong> element is used to group the <strong>name</strong> and
+                <strong>location</strong> together.
+            </p>
+        </section>
+
+        <!-- PLACEHOLDER TEXT -->
+        <section>
+            <h2>Placeholder text</h2>
+            <p>The <strong>text field</strong> and <strong>text area field</strong> can both use the
+                <strong>placeholder</strong> attribute to briefly describe the information that is expected to be
+                inputted in the field.
+            </p>
+            <h3>Placeholder text syntax example (with <em>fieldset and legend</em>, <em>text area fields</em>, and
+                <em>text
+                    fields</em>):</h3>
+            <xmp>
+                <form>
+                    <fieldset>
+                        <legend>Shipping Information</legend>
+                        <div>
+                            <label for="name">Full Name:</label>
+                            <input id="name" type="text" name="name" placeholder="Enter your full name" />
+                        </div>
+                    </fieldset>
+                    <div>
+                        <label for="form-message">Your Message:</label>
+                        <textarea id="form-message" name="message" autofocus="on" required maxlength="200"
+                            placeholder="How can I help you?"></textarea>
+                    </div>
+                </form>
+            </xmp>
+            <form>
+                <fieldset>
+                    <legend>Shipping Information</legend>
+                    <div>
+                        <label for="name">Full Name:</label>
+                        <input id="name" type="text" name="name" placeholder="Enter your full name" />
+                    </div>
+                    ...
+                </fieldset>
+                <div>
+                    <label for="form-message">Your message:</label>
+                    <textarea id="form-message" name="message" autofocus="on" required maxlength="200"
+                        placeholder="How can I help you?"></textarea>
+                </div>
+            </form>
+        </section>
+
+        <!-- PASSWORD FIELD -->
+        <section>
+            <h2>Password field</h2>
+            <h3>Password field syntax example:</h3>
+            <xmp>
+                <form>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input id="password" type="password" name="password" minlength="8" />
+                    </div>
+                </form>
+            </xmp>
+            <form>
+                <div>
+                    <label for="password">Password:</label>
+                    <input id="password" type="password" name="password" minlength="8" />
+                </div>
+            </form>
+            <p>The <strong>minlength</strong> attribute can be used to force the entry to be at least eight characters
+                in length.</p>
+        </section>
+
+        <!-- RADIO BUTTON -->
+        <section>
+            <h2>Radio button</h2>
+            <p><strong>Radio buttons</strong> allow the user to select only one of the radio button choices available.
+            </p>
+            <h3>Radio button syntax example:</h3>
+            <xmp>
+                <form>
+                    <div>
+                        <h2>Favorite Color:</h2>
+                        <div>
+                            <input id="red" name="color" type="radio" value="red" />
+                            <label for="red">Red</label>
+                        </div>
+                        <div>
+                            <input id="blue" name="color" type="radio" value="blue" />
+                            <label for="blue">Blue</label>
+                        </div>
+                        <div>
+                            <input id="white" name="color" type="radio" value="white" />
+                            <label for="white">White</label>
+                        </div>
+                    </div>
+                </form>
+            </xmp>
+            <form>
+                <div>
+                    <h2>Favorite Color:</h2>
+                    <div>
+                        <input id="red" name="color" type="radio" value="red" />
+                        <label for="red">Red</label>
+                    </div>
+                    <div>
+                        <input id="blue" name="color" type="radio" value="blue" />
+                        <label for="blue">Blue</label>
+                    </div>
+                    <div>
+                        <input id="white" name="color" type="radio" value="white" />
+                        <label for="white">White</label>
+                    </div>
+                </div>
+            </form>
+            <p>The <strong>value</strong> attribute is important because that is the data for the selected item that
+                will be submitted with the form data.</p>
+            <p>The parameters for radio buttons (<strong>input</strong>, <strong>name</strong>, and
+                <strong>value</strong>) can be placed in any order.
+            </p>
+            <p>When you click the text of the radio button, that specified text is selected because of how the
+                <strong>for</strong> attribute matches up with the ID of the <strong>input</strong> element.
+            </p>
+        </section>
+
+        <!-- CHECKBOXES -->
+        <section>
+            <h2>Checkboxes</h2>
+            <p>Checkboxes allow the user to select one or more options from the available choices.</p>
+
+        <h3>Checkbox syntax example:</h3>
+        <xmp>
+            <form>
+                <div>
+                    <h2>Choose your monster's features:</h2>
+                    <div>
+                        <input name="scales" type="checkbox" id="scales" />
+                        <label for="scales">Scales</label>
+                    </div>
+                    <div>
+                        <input name="horns" type="checkbox" id="horns" />
+                        <label for="horns">Horns</label>
+                    </div>
+                    <div>
+                        <input name="wings" type="checkbox" id="wings" />
+                        <label for="wings">Wings</label>
+                    </div>
+                </div>
+            </form>
+        </xmp>
+        <form>
+            <div>
+              <h2>Choose your monster's features:</h2>
+              <div>
+                <input name="scales" type="checkbox" id="scales" />
+                <label for="scales">Scales</label>
+              </div>
+              <div>
+                <input name="horns" type="checkbox" id="horns" />
+                <label for="horns">Horns</label>
+              </div>
+              <div>
+                <input name="wings" type="checkbox" id="wings" />
+                <label for="wings">Wings</label>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <!-- DROP-DOWN LIST -->
+        <section>
+            <h2>Drop-down list</h2>
+            <p>A <strong>drop-down list</strong>, also called a <em>select menu list</em>, is a toggleable menu that allows the user to choose one value from the predefined list. Typically more user friendly than radio buttons when there's a long list of items.</p>
+            <h3>Drop-down list syntax example:</h3>
+            <xmp>
+                <form>
+                    <div>
+                        <label for="fonts">Choose a font:</label>
+                        <select name="fonts" id="fonts" size="1">
+                            <option value="arial">Arial</option>
+                            <option value="times">Times New Roman</option>
+                            <option value="comicsans">Comic Sans</option>
+                            <option value="papyrus">Papyrus</option>
+                        </select>
+                    </div>
+                </form>
+            </xmp>
+            <form>
+                <div>
+                    <label for="fonts">Choose a font:</label>
+                    <select name="fonts" id="fonts" size="1">
+                        <option value="arial">Arial</option>
+                        <option value="times">Times New Roman</option>
+                        <option value="comicsans">Comic Sans</option>
+                        <option value="papyrus">Papyrus</option>
+                    </select>
+                </div>
+            </form>
+            <p>To create a drop-down list, you have to use the <strong>select</strong> tag with the <strong>option</strong> tag. The select tag accepts two attributes:
+                <ol>
+                    <li><strong>size</strong>: sets the display of the drop-down menu to show a specified number of items. For example, if you want to show a list with 3 items out of 10, you'd set the size to 3 (size="3").</li>
+                    <li><strong>multiple</strong>: allows the user to choose multiple sections from the drop-down menu.</li>
+                </ol>
+            </p>
+            <p>Note: It isn't recommended to update the style of an HTML drop-down menu using CSS. It can be done with JavaScript without using this input.</p>
+        </section>
+        
+        <!-- SUBMIT AND RESET -->
+        <section>
+            <h2>Submit and reset</h2>
+            <p>Submit and reset buttons are similar to links, but buttons are significant in forms. A button will toggle something in the interface, making buttons perfect for submitting or resetting the data in a form.</p>
+            <h3>Submit and reset button syntax example:</h3>
+            <xmp>
+                <form>
+                    <button type="submit">Submit</button>
+                    <button type="Reset">Reset</button>
+                </form>
+            </xmp>
+            <form>
+                <button type="submit">Submit</button>
+                <button type="Reset">Reset</button>
+            </form>
+            <p>There are three types of buttons:
+                <ol>
+                    <li><strong>submit</strong>: sends the data in the form to the backend program that collects the data.</li>
+                    <li><strong>reset</strong>: clears all of the data that was changed in the existing form.</li>
+                    <li><strong>botton</strong>: buttons with <strong>type="button"</strong> have no default behavior. They are used to trigger client-side functions or scripts that listen to the element's events.</li>
+                </ol>
+            </p>
+        </section>
+
+        <!-- PATTERNS -->
+        <section>
+            <h2>Patterns</h2>
+            <p>The pattern attribute is used to supply patterns that the user's input must match to be valid. A resource for a list of useful patterns can be found at <a href="https://www.html5pattern.com/" target="_blank">HTML5 Pattern</a>.</p>
+
+            <h3>Pattern syntax example (validate a phone number):</h3>
+            <xmp>
+                <form>
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input id="phone" type="text" name="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="xxx-xxx-xxxx" />
+                    </div>
+                </form>
+            </xmp>
+            <form>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input id="phone" type="text" name="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="xxx-xxx-xxxx" />
+                </div>
+            </form>
+        </section>
+
+        <h2>More input types</h2>
+        <p>Additional input types that can be used in a form can be found at <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types" target="_blank">MDN: Input Types</a>.</p>
+    </main>
+</body>
+
+</html>
